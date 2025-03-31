@@ -3,7 +3,7 @@ project(runner_2d)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(SOURCE_FILES main.cpp InputDispatcher.h GameObject.h Factory.h InputDispatcher.h InputDispatcher.cpp InputReceiver.h)
+set(SOURCE_FILES main.cpp InputDispatcher.h GameObject.h Factory.h InputDispatcher.h InputDispatcher.cpp InputReceiver.h Factory.cpp InputReceiver.cpp)
 add_executable(runner_2d ${SOURCE_FILES})
 
 set(CMAKE_PREFIX_PATH /opt/homebrew/Cellar/sfml/2.6.2)
