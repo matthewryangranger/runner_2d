@@ -10,7 +10,7 @@ int main()
   sf::Vector2f resolution;
   resolution.x = sf::VideoMode::getDesktopMode().width;
   resolution.y = sf::VideoMode::getDesktopMode().height;
-  sf::RenderWindow window(sf::VideoMode(resolution.x, resolution.y),"Booster", sf::Style::Fullscreen);
+  sf::RenderWindow window(sf::VideoMode(resolution.x, resolution.y),"Booster", sf::Style::Default);
 
   sf::VertexArray canvas(sf::Quads, 0);
   InputDispatcher inputDispatcher(&window);

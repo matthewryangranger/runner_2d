@@ -5,7 +5,7 @@ Factory::Factory(sf::RenderWindow* window)
 {
   m_Window = window;
   m_Texture = new sf::Texture();
-  if (!m_Texture->loadFromFile("graphics/texture.png"))
+  if (!m_Texture->loadFromFile("../graphics/texture.png"))
   {
     std::cout << "Error loading texture" << std::endl;
   }
