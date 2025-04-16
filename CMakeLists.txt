@@ -7,7 +7,9 @@ set(SOURCE_FILES main.cpp InputDispatcher.h Graphics.h
         Graphics.cpp Component.h Factory.h InputDispatcher.h
         InputDispatcher.cpp InputReceiver.h Factory.cpp InputReceiver.cpp
         Update.cpp Update.h
-        GameObject.cpp)
+        GameObject.cpp
+        SoundEngine.cpp
+        SoundEngine.h)
 add_executable(runner_2d ${SOURCE_FILES})
 
 set(CMAKE_PREFIX_PATH /opt/homebrew/Cellar/sfml/2.6.2)
