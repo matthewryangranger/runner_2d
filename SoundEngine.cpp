@@ -10,8 +10,7 @@ sf::Sound SoundEngine::m_ClickSound;
 sf::SoundBuffer SoundEngine::m_JumpBuffer;
 sf::Sound SoundEngine::m_JumpSound;
 
-SoundEngine::SoundEngine()
-{
+SoundEngine::SoundEngine(){
   assert(m_s_Instance == nullptr);
   m_s_Instance = this;
 
@@ -20,13 +19,34 @@ SoundEngine::SoundEngine()
 
   m_JumpBuffer.loadFromFile("../sound/jump.wav");
   m_JumpSound.setBuffer(m_JumpBuffer);
-
-  void SoundEngine::playClick() {
-    m_ClickSound.play();
-  }
-  void SoundEngine::playJump()
-  {
-    m_JumpSound.play();
-  }
-
 };
+
+void SoundEngine::playClick() {
+  m_ClickSound.play();
+}
+
+void SoundEngine::playJump(){
+  m_JumpSound.play();
+}
+
+void SoundEngine::startMusic(){
+  music.openFromFile("../music/music.wav");
+  m_s_Instance->music.play();
+  m_s_Instance->music.setLoop(true);
+  mMusicIsPlaying = true;
+}
+
+void SoundEngine::pauseMusic(){
+  m_s_Instance->music.pause();
+  mMusicIsPlaying = false;
+}
+
+void SoundEngine::resumeMusic(){
+  m_s_Instance->music.play();
+  mMusicIsPlaying = true;
+}
+
+void SoundEngine::stopMusic(){
+  m_s_Instance->music.stop();
+  mMusicIsPlaying = false;
+}
