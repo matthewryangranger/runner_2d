@@ -9,7 +9,13 @@ set(SOURCE_FILES main.cpp InputDispatcher.h Graphics.h
         Update.cpp Update.h
         GameObject.cpp
         SoundEngine.cpp
-        SoundEngine.h)
+        SoundEngine.h
+        LevelUpdate.cpp
+        LevelUpdate.h
+        PlayerUpdate.cpp
+        PlayerUpdate.h
+        PlayerGraphics.cpp
+        PlayerGraphics.h)
 add_executable(runner_2d ${SOURCE_FILES})
 
 set(CMAKE_PREFIX_PATH /opt/homebrew/Cellar/sfml/2.6.2)
